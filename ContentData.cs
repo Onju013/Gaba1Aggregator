@@ -23,7 +23,7 @@ namespace Gaba1Aggregator
         [OutputProperty]
         public string Title => Thumb.title;
 
-        //[OutputProperty]
+        [OutputProperty]
         public string Description => Thumb.description;
 
         [OutputProperty]
