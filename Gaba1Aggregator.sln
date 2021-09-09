@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gaba1Aggregator", "Gaba1Aggregator.csproj", "{4751ADBB-8E6C-48CD-9CE9-40B95769811F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gaba1Tool", "..\Gaba1Tool\Gaba1Tool.csproj", "{6EA3E548-8174-4002-9481-D2B7315ADC4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4751ADBB-8E6C-48CD-9CE9-40B95769811F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4751ADBB-8E6C-48CD-9CE9-40B95769811F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4751ADBB-8E6C-48CD-9CE9-40B95769811F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4751ADBB-8E6C-48CD-9CE9-40B95769811F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EA3E548-8174-4002-9481-D2B7315ADC4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA3E548-8174-4002-9481-D2B7315ADC4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EA3E548-8174-4002-9481-D2B7315ADC4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EA3E548-8174-4002-9481-D2B7315ADC4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F060C73A-54DF-4E5B-8A00-A9F7FA53BC38}
+	EndGlobalSection
+EndGlobal
