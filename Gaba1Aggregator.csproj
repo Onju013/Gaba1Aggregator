@@ -68,7 +68,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="利用ライブラリ.txt" />
+    <Content Include="利用ライブラリ.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

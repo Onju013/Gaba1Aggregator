@@ -172,6 +172,7 @@ namespace Gaba1Aggregator
             {
                 Map(x => x.VideoId);
                 Map(x => x.UserNickname);
+                Map(x => x.Title);
                 Map(x => x.IsOryu);
                 Map(x => x.HasRevenge);
                 Map(x => x.WatchUrl);
