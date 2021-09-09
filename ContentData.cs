@@ -127,6 +127,7 @@ namespace Gaba1Aggregator
 
         [OutputProperty]
         public bool IsOryu => Tags.Contains("【おりゅ部門】");
+        [OutputProperty]
         public bool HasRevenge => Tags.Contains("【リベンジ部門】");
 
         private ThumbInfo.Thumb Thumb => _thumbInfo.thumb;
