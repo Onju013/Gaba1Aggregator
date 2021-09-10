@@ -11,6 +11,7 @@ namespace Gaba1Aggregator
         private static void Main(string[] args)
         {
             Console.WriteLine("ガバ1動画集計補助ツール\r\n");
+            Console.WriteLine("※動画一覧は毎朝5時更新（スナップショット検索APIで取得しているため）\r\n");
             Console.WriteLine("--------------------");
             Console.Write("第何回？ > ");
             var input = Console.ReadLine();
