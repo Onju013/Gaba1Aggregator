@@ -58,6 +58,9 @@
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
     <None Include="App.config" />
+    <None Include="Readme.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CsvHelper">
