@@ -27,8 +27,8 @@ namespace Gaba1Aggregator
             public DateTime first_retrieve { get; set; }
             public string length { get; set; }
             public string movie_type { get; set; }
-            public bool size_high { get; set; }
-            public bool size_low { get; set; }
+            public int size_high { get; set; }
+            public int size_low { get; set; }
             public int view_counter { get; set; }
             public int comment_num { get; set; }
             public int mylist_counter { get; set; }

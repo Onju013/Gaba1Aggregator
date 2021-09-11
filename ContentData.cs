@@ -39,10 +39,10 @@ namespace Gaba1Aggregator
         public string MovieType => Thumb.movie_type;
 
         [OutputProperty]
-        public bool SizeHigh => Thumb.size_high;
+        public int SizeHigh => Thumb.size_high;
 
         [OutputProperty]
-        public bool SizeLow => Thumb.size_low;
+        public int SizeLow => Thumb.size_low;
 
         [OutputProperty]
         public int ViewCounter => Thumb.view_counter;
