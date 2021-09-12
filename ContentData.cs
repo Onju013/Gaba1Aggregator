@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using Gaba1Aggregator.Attrs;
 
 namespace Gaba1Aggregator
@@ -133,6 +134,9 @@ namespace Gaba1Aggregator
         [OutputProperty]
         public bool HasRevenge => Tags.Contains("【リベンジ部門】");
 
+        [OutputProperty]
+        public string UserIconUrlLarge => GetLargeIconUrl(Thumb.user_icon_url);
+
         private ThumbInfo.Thumb Thumb => _thumbInfo.thumb;
 
         protected readonly SnapData _snapData;
@@ -147,6 +151,26 @@ namespace Gaba1Aggregator
         public override string ToString()
         {
             return $"{SnapContentId} : {Title} - {Status}";
+        }
+
+        /// <summary>
+        /// 大きいユーザアイコンを取得する
+        /// （試作）
+        /// </summary>
+        /// <param name="smallUrl"></param>
+        /// <returns></returns>
+        private string GetLargeIconUrl(string smallUrl)
+        {
+            if (smallUrl == @"https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/defaults/blank_s.jpg")
+                return @"https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon/defaults/blank.jpg";
+
+            var match = Regex.Match(smallUrl, @"usericon/s/([0-9]+/[0-9]+\..+\?[0-9]+)");
+            if (!match.Success)
+                return smallUrl;
+
+            var baseUrl = @"https://secure-dcdn.cdn.nimg.jp/nicoaccount/usericon";
+
+            return $"{baseUrl}/{match.Groups[1].Value}";
         }
 
         private string GetDebuggerDisplay()
@@ -186,7 +210,7 @@ namespace Gaba1Aggregator
                 Map(x => x.IsOryu);
                 Map(x => x.HasRevenge);
                 Map(x => x.WatchUrl);
-                Map(x => x.UserIconUrl);
+                Map(x => x.UserIconUrlLarge);
             }
         }
     }
