@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
-using CsvHelper.Configuration.Attributes;
 using Gaba1Aggregator.Attrs;
 
 namespace Gaba1Aggregator
@@ -103,6 +102,9 @@ namespace Gaba1Aggregator
         public int SnapMylistCounter => _snapData.MylistCounter;
 
         [OutputProperty]
+        public int SnapLikeCounter => _snapData.LikeCounter;
+
+        [OutputProperty]
         public int SnapLengthSeconds => _snapData.LengthSeconds;
 
         [OutputProperty]
@@ -127,6 +129,7 @@ namespace Gaba1Aggregator
 
         [OutputProperty]
         public bool IsOryu => Tags.Contains("【おりゅ部門】");
+
         [OutputProperty]
         public bool HasRevenge => Tags.Contains("【リベンジ部門】");
 
@@ -151,6 +154,9 @@ namespace Gaba1Aggregator
             return ToString();
         }
 
+        /// <summary>
+        /// マッピング
+        /// </summary>
         public class ClassMap : CsvHelper.Configuration.ClassMap<ContentData>
         {
             public ClassMap()
@@ -167,6 +173,9 @@ namespace Gaba1Aggregator
             }
         }
 
+        /// <summary>
+        /// 縮小版のマッピング
+        /// </summary>
         public class ClassMapSmall : CsvHelper.Configuration.ClassMap<ContentData>
         {
             public ClassMapSmall()

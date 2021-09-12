@@ -42,6 +42,12 @@ namespace Gaba1Aggregator
         public int MylistCounter { get; set; }
 
         /// <summary>
+        /// いいね！数
+        /// </summary>
+        [SnapField]
+        public int LikeCounter { get; set; }
+
+        /// <summary>
         /// 再生時間
         /// </summary>
         [SnapField]
@@ -88,16 +94,6 @@ namespace Gaba1Aggregator
         /// </summary>
         /// <returns>,で区切ったフィールド一覧</returns>
         public static string GetFieldNames()
-        {
-            var fields = typeof(SnapData).GetProperties()
-                .Select(prop => new { prop, attr = prop.GetCustomAttribute<SnapFieldAttribute>() })
-                .Where(x => x.attr != null)
-                .Select(x => x.attr.FieldName ?? (x.prop.Name[0].ToString().ToLower() + x.prop.Name.Substring(1, x.prop.Name.Length - 1)));
-
-            return string.Join(",", string.Join(",", fields));
-        }
-
-        public static string GetFieldNames2()
         {
             var fields = typeof(SnapData).GetProperties()
                 .Select(prop => new { prop, attr = prop.GetCustomAttribute<SnapFieldAttribute>() })
