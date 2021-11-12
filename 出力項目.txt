@@ -1,0 +1,45 @@
+﻿●GetThumbInfoから取得する項目
+VideoId			動画ID
+Title			動画タイトル
+Description		動画の説明
+ThumbnailUrl	サムネのURL
+FirstRetrieve	GetThumbInfoで取得した投稿日時	スナップショット検索APIのStartTimeと同じ
+Length			動画の長さ
+MovieType		種類	今はほぼmp4
+SizeHigh		サイズ（byte）			最近の動画は1としか返ってこないので意味が変更されたかも
+SizeLow			低画質版のサイズ（byte）	最近の動画は1としか返ってこないので意味が変更されたかも
+ViewCounter		再生数
+CommentNum		コメント数
+MylistCounter	マイリスト数
+LastResBody		最新コメント
+WatchUrl		動画視聴URL
+ThumbType		ビデオ or マイメモリー
+Embeddable		外部プレイヤーによる再生許可	Trueなら再生可能
+NoLivePlay		生放送再生禁止フラグ			Trueなら禁止
+Tags			タグ一覧（スペース区切り）
+Genre			ジャンル
+UserId			投稿者のID
+UserNickname	投稿者の名前
+UserIconUrl		投稿者のアイコンのURL
+
+●スナップショット検索API（Snap～は毎朝5時更新）
+SnapContentId		動画ID
+SnapTitle			動画タイトル
+SnapDescription		動画の説明
+SnapViewCounter		再生数
+SnapMylistCounter	マイリスト数
+SnapLikeCounter		いいね！数
+SnapLengthSeconds	動画の長さ（秒）
+SnapThumbnailUrl	サムネのURL
+SnapStartTime		投稿日時
+SnapCommentCounter	コメント数
+SnapCategoryTags	カテゴリタグ
+SnapTags			タグ一覧（スペース区切り）
+SnapGenre			ジャンル
+
+●その他
+IsOryu				【おりゅ部門】タグを持っているか
+IsSolo				【単騎部門】タグを持っているか
+IsCombi				【コンビ部門】タグを持っているか
+HasRevenge			【リベンジ部門】タグを持っているか	Hasなのは本編とリベンジをまとめて投稿する王子がいるため
+UserIconUrlLarge	投稿者のアイコンのURL（大きい方）	規則性による変換出力なので例外的なやつがあるかもしれません

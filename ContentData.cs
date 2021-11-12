@@ -132,6 +132,12 @@ namespace Gaba1Aggregator
         public bool IsOryu => Tags.Contains("【おりゅ部門】");
 
         [OutputProperty]
+        public bool IsSolo => Tags.Contains("【単騎部門】");
+
+        [OutputProperty]
+        public bool IsCombi => Tags.Contains("【コンビ部門】");
+
+        [OutputProperty]
         public bool HasRevenge => Tags.Contains("【リベンジ部門】");
 
         [OutputProperty]
@@ -208,6 +214,8 @@ namespace Gaba1Aggregator
                 Map(x => x.UserNickname);
                 Map(x => x.Title);
                 Map(x => x.IsOryu);
+                Map(x => x.IsSolo);
+                Map(x => x.IsCombi);
                 Map(x => x.HasRevenge);
                 Map(x => x.WatchUrl);
                 Map(x => x.UserIconUrlLarge);
