@@ -13,14 +13,17 @@ namespace Gaba1Aggregator
             Console.WriteLine("ガバ1動画集計補助ツール\r\n");
             Console.WriteLine("※動画一覧は毎朝5時更新（スナップショット検索APIで取得しているため）\r\n");
             Console.WriteLine("--------------------");
-            Console.Write("第何回？ > ");
-            var input = Console.ReadLine();
-            if (!int.TryParse(input, out int count))
+            int count; //第count回
+
+            do
             {
-                Console.WriteLine("エラー：数値を入力してください");
-                Thread.Sleep(1000);
-                return;
-            }
+                Console.Write("第何回？ > ");
+                var input = Console.ReadLine();
+                if (!int.TryParse(input, out count) || count <= 0)
+                {
+                    Console.WriteLine("エラー：自然数を入力してください" + count);
+                }
+            } while (count <= 0);
 
             try
             {
@@ -60,7 +63,8 @@ namespace Gaba1Aggregator
             }
 
             Console.WriteLine("\r\n無事完了したようです");
-            Thread.Sleep(1000);
+            Console.WriteLine("何かキーを入力したら終了します");
+            Console.ReadKey();
         }
     }
 }
